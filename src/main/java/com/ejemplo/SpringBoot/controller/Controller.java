@@ -52,7 +52,7 @@ public class Controller {
   //  }
     //Persona
     @PostMapping ("/new/persona")
-    @CrossOrigin(origins ="http: //localhost:4200")
+    @CrossOrigin(origins ="https://curriculum-6394f.web.app")
     public void agregarPersona(@RequestBody Persona pers){
      //   listaPersonas.add(pers);
      persoServ.crearPersona(pers);
