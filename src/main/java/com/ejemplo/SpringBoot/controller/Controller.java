@@ -6,13 +6,11 @@ import com.ejemplo.SpringBoot.model.Hobbies;
 import com.ejemplo.SpringBoot.model.Idioma;
 import com.ejemplo.SpringBoot.model.Persona;
 import com.ejemplo.SpringBoot.model.Trabajos;
-import com.ejemplo.SpringBoot.model.Usuario;
 import com.ejemplo.SpringBoot.service.IEstudiosService;
 import com.ejemplo.SpringBoot.service.IHobbiesService;
 import com.ejemplo.SpringBoot.service.IIdiomaService;
 import com.ejemplo.SpringBoot.service.IPersonaService;
 import com.ejemplo.SpringBoot.service.ITrabajosService;
-import com.ejemplo.SpringBoot.service.IUsuarioService;
 
 
 import java.util.List;
@@ -183,33 +181,7 @@ public class Controller {
     public void modificarTrabajo(@RequestBody Trabajos trabj){
        trabServ.crearTrabajos(trabj); }
 
-    //Usuario
-    @Autowired
-    private IUsuarioService usuServ;
-    @PostMapping ("/new/usuario")
-    public void agregarUsuario(@RequestBody Usuario usu){
+   
     
-     usuServ.crearUsuario(usu);
-    }
-    
-    @GetMapping ("/ver/usuario")
-    @ResponseBody
-    public List <Usuario> veru(){
-     
-     return usuServ.verUsuario();
-    }
-    @DeleteMapping ("/delete/usuario/{id}")
-    public void borrarUsuario(@PathVariable Long id){
-        usuServ.borrarUsuario(id);
-    }
-    @PutMapping("/modif/usuario")
-    public void modificarUsuario(@RequestBody Usuario usua){
-       usuServ.crearUsuario(usua); }
-    
-//    @GetMapping ("/buscar/usuario/{id}")
- //   @ResponseBody
- //   public void buscu(@PathVariable Long id){
-     
-//    usuServ.buscarUsuario(id);
- //   }
+ 
 }

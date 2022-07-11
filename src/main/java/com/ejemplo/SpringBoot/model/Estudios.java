@@ -22,23 +22,23 @@ public class Estudios implements Serializable {
     private String institucionEstudios;
     private String nivelEstudios;
     private String redesEstudios;
+    private int posicionEstudios;
     
     
     
-  //  @ManyToOne(fetch = FetchType.LAZY)
-  //  @JoinColumn(name= "idPersona")
-  //  private Persona person;
+  
 
     public Estudios() {
     }
 
-    public Estudios(Long id, String tituloEstudios, String institucionEstudios, String nivelEstudios, String redesEstudios, Persona person) {
+    public Estudios(Long id, String tituloEstudios, String institucionEstudios, String nivelEstudios, String redesEstudios, int posicionEstudios) {
         this.id = id;
         this.tituloEstudios = tituloEstudios;
         this.institucionEstudios = institucionEstudios;
         this.nivelEstudios = nivelEstudios;
         this.redesEstudios = redesEstudios;
-      //  this.person = person;
+        this.posicionEstudios = posicionEstudios;
+     
     }
     
     

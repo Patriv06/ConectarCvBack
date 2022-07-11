@@ -5,13 +5,11 @@
 package com.ejemplo.SpringBoot.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,21 +30,23 @@ public class Trabajos implements Serializable {
     private String descripcionTrabajo;
     private String tipoTrabajo;
     private String redesTrabajo;
+    private int fechainicTrabajo;
+    private int fechafinTrabajo;
     
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name= "idPersona")
-    //private Persona person;
+   
 
     public Trabajos() {
     }
 
-    public Trabajos(Long id, String nombreTrabajo, String puestoTrabajo, String descripcionTrabajo, String tipoTrabajo, String redesTrabajo, Persona person) {
+    public Trabajos(Long id, String nombreTrabajo, String puestoTrabajo, String descripcionTrabajo, String tipoTrabajo, String redesTrabajo, int fechainicTrabajo, int fechafinTrabajo ){
         this.id = id;
         this.nombreTrabajo = nombreTrabajo;
         this.puestoTrabajo = puestoTrabajo;
         this.descripcionTrabajo = descripcionTrabajo;
         this.tipoTrabajo = tipoTrabajo;
         this.redesTrabajo = redesTrabajo;
+        this.fechainicTrabajo = fechainicTrabajo;
+        this.fechafinTrabajo = fechafinTrabajo;
      //   this.person = person;
     }
 

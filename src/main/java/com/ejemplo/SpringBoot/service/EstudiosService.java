@@ -41,7 +41,7 @@ public class EstudiosService implements IEstudiosService{
 
     @Override
     public List<Estudios> verEtudiosOrdenados() {
-        Sort sortOrder = Sort.by("InstitucionEstudios"); 
+        Sort sortOrder = Sort.by("posicionEstudios"); 
  
        return estrep.findAll(sortOrder);
 
