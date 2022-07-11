@@ -169,7 +169,7 @@ public class Controller {
     @CrossOrigin(origins ="https://curriculum-6394f.web.app")
     public List <Trabajos> vert(){
      
-     return trabServ.verTrabajos();
+     return trabServ.verTrabajosOrdenados();
     }
     @DeleteMapping ("/delete/trabajo/{id}")
     @CrossOrigin(origins ="https://curriculum-6394f.web.app")

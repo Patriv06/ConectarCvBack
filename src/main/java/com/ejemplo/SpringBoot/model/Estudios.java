@@ -22,7 +22,8 @@ public class Estudios implements Serializable {
     private String institucionEstudios;
     private String nivelEstudios;
     private String redesEstudios;
-    private int posicionEstudios;
+    private int fechainicEstudios;
+    private int fechafinEstudios;
     
     
     
@@ -31,13 +32,14 @@ public class Estudios implements Serializable {
     public Estudios() {
     }
 
-    public Estudios(Long id, String tituloEstudios, String institucionEstudios, String nivelEstudios, String redesEstudios, int posicionEstudios) {
+    public Estudios(Long id, String tituloEstudios, String institucionEstudios, String nivelEstudios, String redesEstudios, int fechainicEstudios, int fechafinEstudios) {
         this.id = id;
         this.tituloEstudios = tituloEstudios;
         this.institucionEstudios = institucionEstudios;
         this.nivelEstudios = nivelEstudios;
         this.redesEstudios = redesEstudios;
-        this.posicionEstudios = posicionEstudios;
+        this.fechainicEstudios = fechainicEstudios;
+        this.fechafinEstudios = fechafinEstudios;
      
     }
     
