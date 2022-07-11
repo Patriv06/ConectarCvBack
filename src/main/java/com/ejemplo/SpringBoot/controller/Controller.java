@@ -117,7 +117,7 @@ public class Controller {
     @CrossOrigin(origins ="https://curriculum-6394f.web.app")
     public List <Estudios> verE(){
      
-     return estServ.verEstudios();
+     return estServ.verEtudiosOrdenados();
     }
     @DeleteMapping ("/delete/estudios/{id}")
     @CrossOrigin(origins ="https://curriculum-6394f.web.app")
