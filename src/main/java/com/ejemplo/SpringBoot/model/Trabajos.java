@@ -5,11 +5,14 @@
 package com.ejemplo.SpringBoot.model;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,15 +33,19 @@ public class Trabajos implements Serializable {
     private String descripcionTrabajo;
     private String tipoTrabajo;
     private String redesTrabajo;
-    private int fechainicTrabajo;
-    private int fechafinTrabajo;
+    
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date fechainicTrabajo;
+    
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date fechafinTrabajo;
     
    
 
     public Trabajos() {
     }
 
-    public Trabajos(Long id, String nombreTrabajo, String puestoTrabajo, String descripcionTrabajo, String tipoTrabajo, String redesTrabajo, int fechainicTrabajo, int fechafinTrabajo ){
+    public Trabajos(Long id, String nombreTrabajo, String puestoTrabajo, String descripcionTrabajo, String tipoTrabajo, String redesTrabajo, Date fechainicTrabajo, Date fechafinTrabajo ){
         this.id = id;
         this.nombreTrabajo = nombreTrabajo;
         this.puestoTrabajo = puestoTrabajo;
