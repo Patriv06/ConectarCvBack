@@ -1,10 +1,9 @@
 
 package com.ejemplo.SpringBoot.service;
 
+
 import com.ejemplo.SpringBoot.model.Estudios;
 import java.util.List;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Repository;
 
 
 public interface IEstudiosService {

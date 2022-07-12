@@ -1,6 +1,7 @@
 
 package com.ejemplo.SpringBoot.service;
 
+
 import com.ejemplo.SpringBoot.model.Estudios;
 import com.ejemplo.SpringBoot.repository.EstudiosRepository;
 import java.util.List;
@@ -41,10 +42,11 @@ public class EstudiosService implements IEstudiosService{
 
     @Override
     public List<Estudios> verEtudiosOrdenados() {
-        Sort sortOrder = Sort.by("posicionEstudios"); 
+        Sort sortOrder = Sort.by("fechainicEstudios"); 
  
        return estrep.findAll(sortOrder);
 
     }
-    
 }
+
+   

@@ -1,16 +1,27 @@
 
 package com.ejemplo.SpringBoot.controller;
 
+
+
+
 import com.ejemplo.SpringBoot.model.Estudios;
 import com.ejemplo.SpringBoot.model.Hobbies;
 import com.ejemplo.SpringBoot.model.Idioma;
 import com.ejemplo.SpringBoot.model.Persona;
 import com.ejemplo.SpringBoot.model.Trabajos;
 import com.ejemplo.SpringBoot.service.IEstudiosService;
+
+
+
+
+
 import com.ejemplo.SpringBoot.service.IHobbiesService;
 import com.ejemplo.SpringBoot.service.IIdiomaService;
 import com.ejemplo.SpringBoot.service.IPersonaService;
 import com.ejemplo.SpringBoot.service.ITrabajosService;
+
+
+
 
 
 import java.util.List;
@@ -104,6 +115,7 @@ public class Controller {
     @Autowired
     private IEstudiosService estServ;
     @PostMapping ("/new/estudios")
+    
     @CrossOrigin(origins ="https://curriculum-6394f.web.app")
     public void agregarEstudios(@RequestBody Estudios est){
     
