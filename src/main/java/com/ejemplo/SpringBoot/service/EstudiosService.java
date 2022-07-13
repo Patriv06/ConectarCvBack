@@ -42,7 +42,7 @@ public class EstudiosService implements IEstudiosService{
 
     @Override
     public List<Estudios> verEtudiosOrdenados() {
-        Sort sortOrder = Sort.by("fechainicEstudios"); 
+        Sort sortOrder = Sort.by("fechainicEstudios").descending(); 
  
        return estrep.findAll(sortOrder);
 
