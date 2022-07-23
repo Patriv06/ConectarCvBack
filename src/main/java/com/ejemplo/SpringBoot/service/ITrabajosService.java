@@ -1,7 +1,6 @@
 
 package com.ejemplo.SpringBoot.service;
 
-
 import com.ejemplo.SpringBoot.model.Trabajos;
 import java.util.List;
 
