@@ -11,15 +11,11 @@ import com.ejemplo.SpringBoot.model.Persona;
 import com.ejemplo.SpringBoot.model.Trabajos;
 
 import com.ejemplo.SpringBoot.service.IEstudiosService;
-
-
-
-
-
 import com.ejemplo.SpringBoot.service.IHobbiesService;
 import com.ejemplo.SpringBoot.service.IIdiomaService;
 import com.ejemplo.SpringBoot.service.IPersonaService;
 import com.ejemplo.SpringBoot.service.ITrabajosService;
+
 
 
 

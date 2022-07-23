@@ -42,7 +42,7 @@ public class trabajosService implements ITrabajosService {
         }
      @Override
     public List<Trabajos> verTrabajosOrdenados() {
-        Sort sortOrder = Sort.by("fechainicTrabajos").descending(); 
+        Sort sortOrder = Sort.by("fechainicTrabajo").descending(); 
  
        return trabRepo
                .findAll(sortOrder);
