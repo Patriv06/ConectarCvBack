@@ -8,12 +8,14 @@ import com.ejemplo.SpringBoot.model.Estudios;
 import com.ejemplo.SpringBoot.model.Hobbies;
 import com.ejemplo.SpringBoot.model.Idioma;
 import com.ejemplo.SpringBoot.model.Persona;
+import com.ejemplo.SpringBoot.model.Proyectos;
 import com.ejemplo.SpringBoot.model.Trabajos;
 
 import com.ejemplo.SpringBoot.service.IEstudiosService;
 import com.ejemplo.SpringBoot.service.IHobbiesService;
 import com.ejemplo.SpringBoot.service.IIdiomaService;
 import com.ejemplo.SpringBoot.service.IPersonaService;
+import com.ejemplo.SpringBoot.service.IProyectosService;
 import com.ejemplo.SpringBoot.service.ITrabajosService;
 
 
@@ -192,6 +194,31 @@ public class Controller {
        trabServ.crearTrabajos(trabj); }
 
    
+    //Proyectos
+    @Autowired
+    private IProyectosService proyServ;
+    @PostMapping ("/new/proyecto")
+    @CrossOrigin(origins ="https://cvpatriciarivas.web.app")
+    public void agregarProyectos(@RequestBody Proyectos proy){
     
+     proyServ.crearProyectos(proy);
+    }
+    
+    @GetMapping ("/ver/proyecto")
+    @ResponseBody
+    @CrossOrigin(origins ="https://cvpatriciarivas.web.app")
+    public List <Proyectos> verp(){
+     
+     return proyServ.verProyectosOrdenados();
+    }
+    @DeleteMapping ("/delete/proyecto/{id}")
+    @CrossOrigin(origins ="https://cvpatriciarivas.web.app")
+    public void borrarProyecto(@PathVariable Long id){
+        proyServ.borrarProyectos(id);
+    }
+    @PutMapping("/modif/proyecto")
+    @CrossOrigin(origins ="https://cvpatriciarivas.web.app")
+    public void modificarProyecto(@RequestBody Proyectos proy){
+       proyServ.crearProyectos(proy); }
  
 }

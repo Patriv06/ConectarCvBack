@@ -6,12 +6,9 @@ package com.ejemplo.SpringBoot.model;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,10 +22,7 @@ public class Idioma implements Serializable {
     private String nombreIdioma;
     private String nivelIdioma;
 
-  //  @ManyToOne(fetch = FetchType.LAZY)
-  //  @JoinColumn(name= "idPersona")
-  //  private Persona person;
-    
+
     public Idioma() {
     }
 
@@ -36,7 +30,7 @@ public class Idioma implements Serializable {
         this.id = id;
         this.nombreIdioma = nombreIdioma;
         this.nivelIdioma = nivelIdioma;
-      //  this.person = person;
+   
     }
 
     
