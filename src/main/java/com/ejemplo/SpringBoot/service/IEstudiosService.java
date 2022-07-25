@@ -13,6 +13,8 @@ public interface IEstudiosService {
     
     public void borrarEstudios(Long id);
     
+    public void borrarEstudiosEntero(Estudios est);
+    
     public Estudios buscarEstudios(Long id);
     
     public void modificarEstudios(Estudios estud);

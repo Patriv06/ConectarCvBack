@@ -10,8 +10,8 @@ import com.ejemplo.SpringBoot.model.Idioma;
 import com.ejemplo.SpringBoot.model.Persona;
 import com.ejemplo.SpringBoot.model.Proyectos;
 import com.ejemplo.SpringBoot.model.Trabajos;
-
 import com.ejemplo.SpringBoot.service.IEstudiosService;
+
 import com.ejemplo.SpringBoot.service.IHobbiesService;
 import com.ejemplo.SpringBoot.service.IIdiomaService;
 import com.ejemplo.SpringBoot.service.IPersonaService;
@@ -133,6 +133,12 @@ public class Controller {
     @CrossOrigin(origins ="https://cvpatriciarivas.web.app")
     public void borrarEstudio(@PathVariable Long id){
         estServ.borrarEstudios(id);
+    }
+    
+    @DeleteMapping ("/delete/estudios/entero/{Estudios est}")
+    @CrossOrigin(origins ="https://cvpatriciarivas.web.app")
+    public void borrarEstudioEntero(@PathVariable Estudios est){
+        estServ.borrarEstudiosEntero(est);
     }
     @PutMapping("/modif/estudios")
     @CrossOrigin(origins ="https://cvpatriciarivas.web.app")

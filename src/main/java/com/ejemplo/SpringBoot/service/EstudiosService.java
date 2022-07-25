@@ -29,6 +29,9 @@ public class EstudiosService implements IEstudiosService{
     public void borrarEstudios(Long id) {
         estrep.deleteById(id);
         }
+    @Override
+    public void borrarEstudiosEntero (Estudios est){
+         estrep.delete(est);}
 
     @Override
     public Estudios buscarEstudios(Long id) {
