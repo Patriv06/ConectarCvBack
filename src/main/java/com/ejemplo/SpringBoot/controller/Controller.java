@@ -69,7 +69,8 @@ public class Controller {
     
     @GetMapping ("/ver/personas")
     @ResponseBody
-    @CrossOrigin(origins ="https://cvpatriciarivas.web.app")
+    @CrossOrigin(origins = "*")
+    //@CrossOrigin(origins ="https://cvpatriciarivas.web.app")
     public List <Persona> verPersonas(){
      //   return listaPersonas;
      return persoServ.verPersona();
