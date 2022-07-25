@@ -73,6 +73,7 @@ public class Controller {
     //@CrossOrigin(origins ="https://cvpatriciarivas.web.app")
     public List <Persona> verPersonas(){
      //   return listaPersonas;
+    
      return persoServ.verPersona();
     }
     @DeleteMapping ("/delete/{id}")
@@ -136,11 +137,7 @@ public class Controller {
         estServ.borrarEstudios(id);
     }
     
-    @DeleteMapping ("/delete/estudios/entero/{Estudios est}")
-    @CrossOrigin(origins ="https://cvpatriciarivas.web.app")
-    public void borrarEstudioEntero(@PathVariable Estudios est){
-        estServ.borrarEstudiosEntero(est);
-    }
+   
     @PutMapping("/modif/estudios")
     @CrossOrigin(origins ="https://cvpatriciarivas.web.app")
     public void modificarEstudio(@RequestBody Estudios estud){
