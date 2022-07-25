@@ -12,6 +12,7 @@ import com.ejemplo.SpringBoot.model.Proyectos;
 import com.ejemplo.SpringBoot.model.Trabajos;
 import com.ejemplo.SpringBoot.service.IEstudiosService;
 
+
 import com.ejemplo.SpringBoot.service.IHobbiesService;
 import com.ejemplo.SpringBoot.service.IIdiomaService;
 import com.ejemplo.SpringBoot.service.IPersonaService;
@@ -69,7 +70,7 @@ public class Controller {
     
     @GetMapping ("/ver/personas")
     @ResponseBody
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "https://cvpatriciarivas.web.app")
     //@CrossOrigin(origins ="https://cvpatriciarivas.web.app")
     public List <Persona> verPersonas(){
      //   return listaPersonas;
